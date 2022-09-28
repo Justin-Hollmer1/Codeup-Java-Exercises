@@ -8,26 +8,22 @@ public class ScannerClass {
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a sentence");
-        String userInput = scanner.nextLine();
-        System.out.println(userInput);
+        System.out.println("Enter 3 words");
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+        System.out.println(word1+ " " + word2 + " " + word3);
 
-
+        scanner.nextLine();
         System.out.print("Please enter the x length of the room: ");
-        String xValue = scanner.nextLine();
+        int xValue = scanner.nextInt();
         System.out.print("Please enter the y length of the room: ");
-        String yValue = scanner.nextLine();
+        int yValue = scanner.nextInt();
         System.out.print("Please enter the z length of the room: ");
-        String zValue = scanner.nextLine();
-        System.out.println("The area of the room is: " + (Integer.parseInt(xValue) * Integer.parseInt(yValue)) + " feet squared.");
-        System.out.println("The perimeter of the room is: " + ((Integer.parseInt(xValue) * 2) + (Integer.parseInt(yValue)) * 2) + " feet.");
-        System.out.println("The volume of the room is: " +  + (Integer.parseInt(xValue) * Integer.parseInt(yValue) * Integer.parseInt(zValue)) + " feet cubed.");
-
-
-
-
-
-
+        int zValue = scanner.nextInt();
+        System.out.print("\nThe area of the room is: " + (xValue * yValue) + " feet squared. ");
+        System.out.print("The perimeter of the room is: " + (xValue * 2) + (yValue * 2) + " feet. ");
+        System.out.print("The volume of the room is: " +  + (xValue * yValue * zValue) + " feet cubed.");
 
 
     }
