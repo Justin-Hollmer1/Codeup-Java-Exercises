@@ -13,13 +13,16 @@ public class ScannerClass {
         System.out.println(userInput);
 
 
-        System.out.print("Please enter the x coordinate of the room: ");
+        System.out.print("Please enter the x length of the room: ");
         String xValue = scanner.nextLine();
-        System.out.println("");
-        System.out.print("Please enter the y coordinate of the room: ");
+        System.out.print("Please enter the y length of the room: ");
         String yValue = scanner.nextLine();
-        System.out.println("The area of the room is: " + (Integer.parseInt(xValue) * Integer.parseInt(yValue)) + " feet squared");
-        System.out.println("The perimeter of the room is: " + ((Integer.parseInt(xValue) * 2) + (Integer.parseInt(yValue)) * 2) + " feet");
+        System.out.print("Please enter the z length of the room: ");
+        String zValue = scanner.nextLine();
+        System.out.println("The area of the room is: " + (Integer.parseInt(xValue) * Integer.parseInt(yValue)) + " feet squared.");
+        System.out.println("The perimeter of the room is: " + ((Integer.parseInt(xValue) * 2) + (Integer.parseInt(yValue)) * 2) + " feet.");
+        System.out.println("The volume of the room is: " +  + (Integer.parseInt(xValue) * Integer.parseInt(yValue) * Integer.parseInt(zValue)) + " feet cubed.");
+
 
 
 
