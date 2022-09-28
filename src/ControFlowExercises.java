@@ -3,16 +3,19 @@ import java.util.Scanner;
 
 public class ControFlowExercises {
     public static void main(String[] args) {
-        int i = 5;
-        while (i <= 15) {
-            System.out.print(i + " ");
-            i++;
-        }
-
-
-
-        for (double u = 2; u < 1_000_000; u *= u) {
-            System.out.println(u);
+        for (int i = 0; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            }
+            else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }
+            else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            }
+            else {
+                System.out.println(i);
+            }
         }
     }
 }
