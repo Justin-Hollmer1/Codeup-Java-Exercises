@@ -11,12 +11,8 @@ public class ControFlowExercises {
 
 
 
-        double u = 2;
-
-
-        do {
-            u = u * u;
+        for (double u = 2; u < 1_000_000; u *= u) {
             System.out.println(u);
-        } while (u < 1_000_000);
+        }
     }
 }
