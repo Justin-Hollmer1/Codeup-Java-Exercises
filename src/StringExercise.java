@@ -17,32 +17,5 @@ public class StringExercise {
         String string3 = "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslash \\\\\\!";
         System.out.println(string3);
 
-        class Bob {
-            void response(String input) {
-                if (input.endsWith("?")) {
-                    System.out.println("Sure.");
-                }
-                else if (input.endsWith("!")) {
-                    System.out.println("Woah, chill out!");
-                }
-                else if (input.equals("")) {
-                    System.out.println("Fine. By the way!");
-                }
-                else {
-                    System.out.println("Whatever.");
-                }
-            }
-        }
-        Scanner scanner = new Scanner(System.in);
-        Bob bobInstance = new Bob();
-        int number = 1;
-        while (number != 0) {
-            System.out.println("Have a conversation with Bob, press 9 to stop talking.");
-            String userInput = scanner.nextLine();
-            if (userInput.equals("9")) {
-                break;
-            }
-            bobInstance.response(userInput);
-        }
     }
 }
