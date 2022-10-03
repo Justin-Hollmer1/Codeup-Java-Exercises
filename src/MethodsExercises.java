@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
 //        recurse();
-        doTheThing();
+//        doTheThing();
+        factorial();
     }
     public static double add(double input1, double input2) {
         return input1 + input2;
@@ -69,8 +70,32 @@ public class MethodsExercises {
         }
     }
 
+    public static void factorial() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a number between 1 and 20 to get the factorial of that number.");
+        int userInput = scanner.nextInt();
+        if (userInput < 1 || userInput > 20) {
+            System.out.println("Invalid input");
+            factorial();
+        }
 
+        System.out.println(factorialCalculation(userInput));
+        System.out.println("Would you like to enter another number? Enter \"y\" to go again.");
+        scanner.nextLine();
+        String goAgain = scanner.nextLine();
+        if (goAgain.equalsIgnoreCase("y")) {
+            factorial();
+        }
+        else {
+            System.exit(0);
+        }
+    }
 
-
-
+    public static long factorialCalculation(int input) {
+        long total = input;
+        for (int i = 1; i < input; i++) {
+            total *= i;
+        }
+        return total;
+    }
 }
