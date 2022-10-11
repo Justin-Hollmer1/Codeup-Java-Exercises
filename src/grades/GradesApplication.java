@@ -59,30 +59,30 @@ public class GradesApplication {
                 }
             }
             else {
-
-            }
-            System.out.println("What student would you like to see information on?");
-            String userInput = scanner.nextLine();
-            int testValue = 0;
-            while (testValue != 1) {
-                if (!students.containsKey(userInput)) {
-                    System.out.println("Please enter valid github username");
-                    userInput = scanner.nextLine();
-                    continue;
+                System.out.println("What student would you like to see information on?");
+                String userInput = scanner.nextLine();
+                int testValue = 0;
+                while (testValue != 1) {
+                    if (!students.containsKey(userInput)) {
+                        System.out.println("Please enter valid github username");
+                        userInput = scanner.nextLine();
+                        continue;
+                    }
+                    else {
+                        testValue += 1;
+                    }
                 }
-                else {
-                    testValue += 1;
-                }
+
+                System.out.printf("Name: %s", students.get(userInput).getName());
+                System.out.println();
+                System.out.printf("GitHub Username: %s", userInput);
+                System.out.println();
+                System.out.printf("Current grades: %s", students.get(userInput).getGrades());
+                System.out.println();
+                System.out.printf("Current Grade Average: %s", students.get(userInput).getGradeAverage());
+                System.out.println();
             }
 
-            System.out.printf("Name: %s", students.get(userInput).getName());
-            System.out.println();
-            System.out.printf("GitHub Username: %s", userInput);
-            System.out.println();
-            System.out.printf("Current grades: %s", students.get(userInput).getGrades());
-            System.out.println();
-            System.out.printf("Current Grade Average: %s", students.get(userInput).getGradeAverage());
-            System.out.println();
 
             System.out.println("Would you like to run the program again? Please enter \"yes\" or \"no\"");
             String continueOrNot = scanner.nextLine();
