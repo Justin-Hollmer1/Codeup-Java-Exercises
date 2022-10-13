@@ -17,8 +17,22 @@ public class Input {
         return userNumber;
     }
 
+//    public static int getInt() {
+//        return scanner.nextInt();
+//    }
+
     public static int getInt() {
-        return scanner.nextInt();
+        System.out.println("Please enter an integer");
+        String thisString = getString();
+        try {
+            int thisInt = Integer.parseInt(thisString);
+            System.out.println("Your integer is " + thisInt + ".");
+            return thisInt;
+        } catch (Exception e) {
+            System.out.println(thisString + " is not an integer.");
+//            System.out.println(e);
+            return getInt();
+        }
     }
 
     public static double getDouble(int min, int max) {
@@ -31,8 +45,20 @@ public class Input {
         return userNumber;
     }
 
+//    public static double getDouble() {
+//        return scanner.nextDouble();
+//    }
     public static double getDouble() {
-        return scanner.nextDouble();
+        System.out.println("Please enter a double.");
+        String thisString = getString();
+        try {
+            double thisIsADouble = Double.parseDouble(thisString);
+            System.out.println("Okay, " + thisIsADouble + " is your double.");
+            return thisIsADouble;
+        } catch (Exception e) {
+            System.out.println("That is not a double.");
+            return getDouble();
+        }
     }
 
     public static boolean yesNo() {
@@ -41,6 +67,10 @@ public class Input {
             return true;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getInt());
     }
 
 }
